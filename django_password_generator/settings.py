@@ -83,9 +83,11 @@ WSGI_APPLICATION = 'django_password_generator.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {dj_database_url.config(
+DATABASES = {
+    'default': dj_database_url.config(
         default='postgresql://postgres:postgres@localhost:5432/mysite',
-        conn_max_age=600)
+        conn_max_age=600
+        )
         }
 
 
